@@ -8,13 +8,13 @@ which templates loop over to generate a list of posts. --}}
         {{!-- This is a responsive image, it loads different sizes depending on device
         https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
         <img class="post-card-image"
-            srcset="https://grantable.mo.cloudinary.net/blog/{{img_url feature_image size="s"}} 300w,
-                    https://grantable.mo.cloudinary.net/blog/{{img_url feature_image size="m"}} 600w,
-                    https://grantable.mo.cloudinary.net/blog/{{img_url feature_image size="l"}} 1000w,
-                    https://grantable.mo.cloudinary.net/blog/{{img_url feature_image size="xl"}} 2000w"
+            srcset="https://grantable.mo.cloudinary.net/{{img_url feature_image size="s"}} 300w,
+                    https://grantable.mo.cloudinary.net/{{img_url feature_image size="m"}} 600w,
+                    https://grantable.mo.cloudinary.net/{{img_url feature_image size="l"}} 1000w,
+                    https://grantable.mo.cloudinary.net/{{img_url feature_image size="xl"}} 2000w"
             sizes="(max-width: 1000px) 400px, 800px"
             loading="lazy"
-            src="https://grantable.mo.cloudinary.net/blog/{{img_url feature_image size="m"}}"
+            src="https://grantable.mo.cloudinary.net/{{img_url feature_image size="m"}}"
             alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
         />
     </a>
